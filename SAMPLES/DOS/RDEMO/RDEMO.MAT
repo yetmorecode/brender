@@ -1,0 +1,41 @@
+## Materials script file for rdemo
+##
+## $Id: $
+## $Locker: $
+
+material = [
+	identifier = "mirror";
+	ambient = 0.05;
+	diffuse = 0.44;
+	specular = 0.50;
+	power = 20;
+	flags = [light, smooth, environment_l];
+	index_shade = "shade.tab";
+];
+
+material = [
+	identifier = "earth";
+	colour = [30,200,20];
+	ambient = 0.05;
+	diffuse = 0.44;
+	specular = 0.50;
+	power = 20;
+	flags = [light, smooth];
+	colour_map = "earth.pix";
+	index_shade = "shade.tab";
+	map_transform = [[-1,0],[0,1],[0,0]];
+];
+
+
+material = [
+	identifier = "moon";
+	ambient = 0.05;
+	diffuse = 0.44;
+	specular = 0.50;
+	power = 20;
+	flags = [light, smooth];
+	colour_map = "ast.pix";
+	index_shade = "shade.tab";
+];
+
+

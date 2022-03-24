@@ -1,0 +1,11 @@
+-p example.pal
+-h example.tab
+-t example.pix
+-t example2.pix
+-s example.mat
+-s example2.mat
+-m venus.dat
+-m torus.dat
+-a example.act
+-c camera
+-l light

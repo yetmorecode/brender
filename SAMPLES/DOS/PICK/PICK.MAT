@@ -1,0 +1,58 @@
+## Materials script file for test harness
+##
+## $Id: $
+## $Locker: $
+
+# Smooth and flat versions of all the ramps in the test palette
+#
+material = [
+	identifier = "red";
+	flags = [light,smooth];
+	colour = [255,0,0];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 160; index_range = 31;
+];
+
+material = [
+	identifier = "green";
+	flags = [light,smooth];
+	colour = [0,255,0];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 96; index_range = 31;
+];
+
+material = [
+	identifier = "blue";
+	flags = [light,smooth];
+	colour = [0,0,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 64; index_range = 31;
+];
+
+
+
+material = [
+	identifier = "test_texture";
+	flags = [light, smooth, perspective];
+	ambient = 0.10; diffuse = 0.70; specular = 0.20;
+	power=20;
+	colour_map = "testtex.pix";
+	index_shade = "shade.tab";
+];
+
+
+# Test environment maps
+#
+material = [
+	identifier = "environment";
+	flags = [light, smooth, environment];
+	ambient = 0.20; diffuse = 0.50; specular = 0.60;
+	power=20;
+	colour_map = "testenv.pix";
+	index_shade = "shade.tab";
+];
+
+

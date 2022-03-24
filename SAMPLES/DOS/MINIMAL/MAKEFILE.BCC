@@ -1,0 +1,60 @@
+# Copyright (c) 1993 Argonaut Software Ltd. All rights reserved.
+#
+# $Id: makefile.bcc 1.2 1995/01/23 16:42:15 sam Exp $
+# $Locker:  $
+#
+# Makefile for Borland C++ 4.5 + Powerpack
+#
+TARGET=minimal.exe
+
+!ifndef BASE_DIR
+BASE_DIR=..\..\..
+!endif
+
+# Borland, Fixed, Release
+#
+LIB_TYPE=bxr
+LIB_TYPE_NB=br
+LIB_TYPE_EX=ppbr
+BASED=FIXED
+
+CC=bcc32
+CFLAGS=-c -a4  -DBASED_$(BASED)=1\
+ -I$(BASE_DIR)\inc\
+ -I$(BASE_DIR)\dosio\
+
+LD=tlink32
+LDFLAGS=-Tpe -ax -v
+
+OBJS=\
+	minimal.obj\
+
+LIBS=\
+	$(BASE_DIR)\lib\brfw$(LIB_TYPE).lib\
+	$(BASE_DIR)\lib\brfm$(LIB_TYPE).lib\
+	$(BASE_DIR)\lib\brdb$(LIB_TYPE).lib\
+	$(BASE_DIR)\lib\brmt$(LIB_TYPE).lib\
+	$(BASE_DIR)\lib\brpm$(LIB_TYPE_NB).lib\
+	$(BASE_DIR)\lib\dosio$(LIB_TYPE_NB).lib\
+	$(BASE_DIR)\lib\brst$(LIB_TYPE_NB).lib\
+	$(BASE_DIR)\lib\hst$(LIB_TYPE_EX).lib\
+
+# Default rules
+#
+# Cope with long command lines
+#
+.c.obj:
+	$(CC) @&&!
+$(CFLAGS)
+$<
+!
+
+$(TARGET): $(OBJS)
+	$(LD) $(LDFLAGS) @&&!
+c0x32.obj $(OBJS)
+$(TARGET)
+$*
+dpmi32.lib cw32.lib $(LIBS)
+!
+
+

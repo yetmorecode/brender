@@ -1,0 +1,191 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "dispatch.h"
+#include "app.h"
+#include "buffer.h"
+#include "world.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+SIMPVIEW                ICON    DISCARDABLE     "argonaut.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUT_BOX DIALOG DISCARDABLE  22, 17, 172, 43
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,135,25,32,14,WS_GROUP
+    ICON            "SIMPVIEW",-1,5,10,18,20
+    LTEXT           "Argonaut Technologies Ltd",-1,45,5,100,8
+    LTEXT           "Simple Viewer",-1,65,20,50,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+SIMPVIEW MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New...",                     ID_FILE_NEW, GRAYED
+        MENUITEM "&Open...",                    ID_FILE_OPEN, GRAYED
+        MENUITEM "&Close",                      ID_FILE_CLOSE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Save",                       ID_FILE_SAVE, GRAYED
+        MENUITEM "Save &As...",                 ID_FILE_SAVEAS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Page Set&up...",              ID_FILE_PAGESETUP, GRAYED
+        MENUITEM "&Print...",                   ID_FILE_PRINT, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Buffer Copy"
+        BEGIN
+            MENUITEM "&WinG",                       ID_UPDATE_WING
+            MENUITEM "&StretchDIBits",              ID_UPDATE_STRETCHDIBITS
+            MENUITEM "&DIBSection",                 ID_UPDATE_DIBSECTION
+            MENUITEM "D&ummy",                      ID_UPDATE_DUMMY
+            MENUITEM SEPARATOR
+            MENUITEM "Force All",                   ID_UPDATE_FORCE_ALL
+        END
+    END
+    POPUP "&World"
+    BEGIN
+        POPUP "&Update"
+        BEGIN
+            MENUITEM "&Foreground",                 ID_WORLD_UPDATE_FOREGROUND
+
+            MENUITEM "&Always",                     ID_WORLD_UPDATE_ALWAYS
+            MENUITEM "&Never",                      ID_WORLD_UPDATE_NEVER
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0xbL
+#else
+ FILEFLAGS 0xaL
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Argonaut Technologies Ltd.\0"
+            VALUE "FileDescription", "Argonaut BRender (WIN32)\0"
+            VALUE "FileVersion", "Version 1.0\0"
+            VALUE "InternalName", "BRENDER\0"
+            VALUE "LegalCopyright", "Copyright \251 Argonaut Technologies Ltd. 1990-1995\0"
+            VALUE "OriginalFilename", "\0"
+            VALUE "ProductName", "BRENDER\0"
+            VALUE "ProductVersion", "\0"
+            VALUE "ProuctVersion", "Version 1.0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""dispatch.h""\r\n"
+    "#include ""app.h""\r\n"
+    "#include ""buffer.h""\r\n"
+    "#include ""world.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APPNAME             "SIMPVIEW"
+    IDS_DESCRIPTION         "Simple View"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

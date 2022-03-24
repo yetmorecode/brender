@@ -1,0 +1,149 @@
+## Materials script file for test harness
+##
+## $Id: $
+## $Locker: $
+
+material = [
+	identifier = "tundra";
+	ambient = 0.6;
+	diffuse = 0.4;
+	specular = 0;
+	power = 20;
+	flags = [perspective];
+	index_base = 0;
+	index_range = 63;
+	colour_map = "terrain.pix";
+	index_shade = "fly.tab";
+];
+
+material = [
+	identifier = "logo";
+	ambient = 0.2;
+	diffuse = 0.95;
+	specular = 0.05;
+	power = 20;
+	flags = [light,smooth];
+	index_base = 0;
+	index_range = 63;
+	colour_map = "logo.pix";
+	index_shade = "fly.tab";
+	map_transform = [[1,0],[0,-1],[0,0]];
+];
+
+material = [
+	identifier = "bodywork";
+	ambient = 0.2;
+	diffuse = 0.95;
+	specular = 0.05;
+	power = 20;
+	flags = [light,smooth,perspective];
+	index_base = 0;
+	index_range = 63;
+	colour_map = "saucer.pix";
+	index_shade = "fly.tab";
+];
+
+#material = [
+#	identifier = "roof";
+#	ambient = 0.2;
+#	diffuse = 0.95;
+#	specular = 0.05;
+#	power = 20;
+#	flags = [light,smooth];
+#	index_base = 0;
+#	index_range = 63;
+#	colour_map = "roof.pix";
+#	index_shade = "fly.tab";
+#];
+
+#material = [
+#	identifier = "planks";
+#	ambient = 0.7;
+#	diffuse = 0.25;
+#	specular = 0.05;
+#	power = 20;
+#	flags = [light,smooth];
+#	index_base = 0;
+#	index_range = 63;
+#	colour_map = "planks.pix";
+#	index_shade = "fly.tab";
+#];
+
+#material = [
+#	identifier = "x_chalet";
+#	ambient = 0.6;
+#	diffuse = 0.35;
+#	specular = 0.05;
+#	power = 20;
+#	flags = [light,smooth];
+#	index_base = 0;
+#	index_range = 63;
+#	colour_map = "x_chalet.pix";
+#	index_shade = "fly.tab";
+#	map_transform = [[1,0],[0,-1],[0,0]];
+#];
+
+material = [
+	identifier = "shadow";
+	flags = [];
+	index_base = 8;
+#	index_range = 0;
+	map_transform = [[1,0],[0,-1],[0,0]];
+
+#	colour_map = "saucer.pix";
+#	index_shade = "fly.tab";
+
+];
+
+#material = [
+#	identifier = "ste-bod";
+#	ambient = 0.2;
+#	diffuse = 0.95;
+#	specular = 0.05;
+#	power = 20;
+#	flags = [light,smooth,perspective];
+#	index_base = 0;
+#	index_range = 63;
+#	colour_map = "steabod.pix";
+#	index_shade = "fly.tab";
+#];
+
+#material = [
+#	identifier = "ste-cowl";
+#	ambient = 0.2;
+#	diffuse = 0.95;
+#	specular = 0.05;
+#	power = 20;
+#	flags = [light,smooth,perspective];
+#	index_base = 0;
+#	index_range = 63;
+#	colour_map = "steacwl.pix";
+#	index_shade = "fly.tab";
+#];
+
+#material = [
+#	identifier = "ste-wing";
+#	ambient = 0.2;
+#	diffuse = 0.95;
+#	specular = 0.05;
+#	power = 20;
+#	flags = [light,smooth,perspective];
+#	index_base = 0;
+#	index_range = 63;
+#	colour_map = "steawing.pix";
+#	index_shade = "fly.tab";
+#];
+
+#material = [
+#	identifier = "ste-tail";
+#	ambient = 0.2;
+#	diffuse = 0.95;
+#	specular = 0.05;
+#	power = 20;
+#	flags = [light,smooth,perspective];
+#	index_base = 0;
+#	index_range = 63;
+#	colour_map = "steatail.pix";
+#	index_shade = "fly.tab";
+#];
+
